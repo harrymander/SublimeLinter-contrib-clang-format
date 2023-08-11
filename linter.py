@@ -7,7 +7,7 @@ class ClangFormat(lint.Linter):
     cmd = 'clang-format --dry-run --style=file ${args} ${file}'
     default_type = lint.WARNING
     defaults = {
-        'selector': 'source.c - source.c++'
+        'selector': 'source.c,source.c++'
     }
 
     error_stream = lint.STREAM_STDERR
