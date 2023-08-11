@@ -1,6 +1,3 @@
-This is a template. For "how to make a linter", please check [the HOWTO](HOWTO.md).
-
------------------------------------------------------------------
 
 SublimeLinter-contrib-clang-format
 ================================
