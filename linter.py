@@ -4,7 +4,15 @@ from SublimeLinter import lint
 
 
 class ClangFormat(lint.Linter):
-    cmd = 'clang-format --dry-run --style=file ${args} ${file}'
+    name = 'clang-format'
+    cmd = (
+        'clang-format',
+        '--dry-run',
+        '--fallback-style=llvm',
+        '--style=file',
+        '${args}',
+        '${file}',
+    )
     default_type = lint.WARNING
     defaults = {
         'selector': 'source.c,source.c++'
