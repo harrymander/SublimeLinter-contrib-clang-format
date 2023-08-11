@@ -1,0 +1,6 @@
+select = [
+    "E", "W",  # pycodestyle
+    "F",  # pyflakes
+    "I",  # isort
+]
+line-length = 79
