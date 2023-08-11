@@ -1,9 +1,10 @@
-SublimeLinter-clang-format
---------------------------
+SublimeLinter-contrib-clang-format
+----------------------------------
+
 This linter plugin for SublimeLinter provides an interface to clang-format.
 
 clang-format must be installed, please see:
 https://clang.llvm.org/docs/ClangFormat.html
 
 For more information, please see:
-https://github.com/harrymander/SublimeLinter-clang-format
+https://github.com/harrymander/SublimeLinter-contrib-clang-format
