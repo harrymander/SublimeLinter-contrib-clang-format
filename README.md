@@ -1,8 +1,8 @@
 
-SublimeLinter-contrib-clang-format
+SublimeLinter-clang-format
 ================================
 
-[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-clang-format.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-clang-format)
+[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-clang-format.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-clang-format)
 
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [clang-format](https://clang.llvm.org/docs/ClangFormat.html). It will be used with files that have the `C` and `C++` syntaxes.
 
