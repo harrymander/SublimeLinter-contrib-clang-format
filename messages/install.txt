@@ -1,5 +1,5 @@
 SublimeLinter-clang-format
--------------------------------
+--------------------------
 This linter plugin for SublimeLinter provides an interface to clang-format.
 
 For more information, please see:

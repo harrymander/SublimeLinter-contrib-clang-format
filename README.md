@@ -1,6 +1,6 @@
 
 SublimeLinter-clang-format
-================================
+==========================
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-clang-format.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-clang-format)
 
