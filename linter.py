@@ -8,14 +8,14 @@ class ClangFormat(lint.Linter):
     cmd = (
         'clang-format',
         '--dry-run',
-        '--fallback-style=llvm',
-        '--style=file',
         '${args}',
         '${file}',
     )
     default_type = lint.WARNING
     defaults = {
-        'selector': 'source.c,source.c++'
+        'selector': 'source.c,source.c++',
+        '--fallback-style=': 'llvm',
+        '--style=': 'file',
     }
 
     error_stream = lint.STREAM_STDERR
