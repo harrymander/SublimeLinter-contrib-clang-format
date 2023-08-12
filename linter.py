@@ -8,8 +8,8 @@ class ClangFormat(lint.Linter):
     cmd = (
         'clang-format',
         '--dry-run',
+        '--assume-filename=${file}',
         '${args}',
-        '${file}',
     )
     default_type = lint.WARNING
     defaults = {
