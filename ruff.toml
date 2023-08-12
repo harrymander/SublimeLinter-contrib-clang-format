@@ -4,3 +4,4 @@ select = [
     "I",  # isort
 ]
 line-length = 79
+target-version = "py38"
