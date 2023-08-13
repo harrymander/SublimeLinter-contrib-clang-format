@@ -1,13 +1,13 @@
-import re
-
+from sublime import Region
 from SublimeLinter import lint
+from SublimeLinter.lint import LintMatch
 
 
 class ClangFormat(lint.Linter):
     name = 'clang-format'
     cmd = (
         'clang-format',
-        '--dry-run',
+        '--output-replacements-xml',
         '--assume-filename=${file}',
         '${args}',
     )
@@ -18,12 +18,21 @@ class ClangFormat(lint.Linter):
         '--style=': 'file',
     }
 
-    error_stream = lint.STREAM_STDERR
-    multiline = True
-    re_flags = re.MULTILINE
-    regex = (
-        r'^.*?:(?P<line>\d+):(?P<col>\d+): '  # line and column number
-        r'(?:(?P<error>error)|(?P<warning>warning)): '  # 'error' or 'warning'
-        r'(?P<message>.*?)'  # message
-        r'\n.*\n.*$'  # two extra lines to ignore
-    )
+    error_stream = lint.STREAM_STDOUT
+    regex = r"^<replacement offset='(?P<offset>\d+)' length='(?P<length>\d+)'"
+
+    def split_match(self, match):
+        return LintMatch({
+            'warning': 'warning',
+            'message': 'Not formatted properly',
+            'offset': int(match.group('offset')),
+            'length': int(match.group('length')),
+            'line': 1,
+        })
+
+    def process_match(self, m, vv):
+        r = super().process_match(m, vv)
+        offset = m['offset']
+        r['region'] = Region(offset, offset + m['length'])
+        r['line'] = offset
+        return r
