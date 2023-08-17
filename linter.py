@@ -16,6 +16,8 @@ class ClangFormat(lint.Linter):
 
     if hasattr(VirtualView, 'rowcol'):
         """
+        Requires SublimeLinter >=4.23.0
+
         Use --output-replacements-xml to output the offset and length of each
         replacement. Then match the entire region to be replaced. Requires
         VirtualView.rowcol method.
