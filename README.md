@@ -17,12 +17,12 @@ In order for `clang-format` to be executed by SublimeLinter, you must ensure tha
 - SublimeLinter settings: http://sublimelinter.readthedocs.org/en/latest/settings.html
 - Linter settings: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
 
-Formatting style can be configured using a [`.clang-format` file](https://clang.llvm.org/docs/ClangFormatStyleOptions.html) or selecting one of the preset styles; see `clang-format --help` for the available preset styles.
+By default, linting will only be enabled if a [`.clang-format` file](https://clang.llvm.org/docs/ClangFormatStyleOptions.html) is present in one of the parent directories of the file being processed. To override this behaviour, set the `style` or `fallback-style` options (see table below) to one of the preset styles: run `clang-format --help` for a list of the available presets.
 
-|Setting        |Description                                                                                             |
-|:--------------|:-------------------------------------------------------------------------------------------------------|
-|style          |Formatting style. Default is `file`, which will use `.clang-format` file.                               |
-|fallback-style |Style to use if no `.clang-format` file can be found and `fallback-style` is `file`. Default is `llvm`. |
+| Setting | Description |
+| :-------| :-----------|
+| style | Formatting style. Default is `file`, which will use the `.clang-format` file in one of the parent directories of the file being linted. |
+| fallback-style | Style to use if `style` is `file` and no `.clang-format` file can be found. Default is `none`, which disables linting if no `.clang-format` file is found. |
 
 For example, to use GNU style, add the following to your Sublime Text settings or project settings:
 

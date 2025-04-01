@@ -10,7 +10,7 @@ class ClangFormat(lint.Linter):
     default_type = lint.WARNING
     defaults = {
         'selector': 'source.c,source.c++',
-        '--fallback-style=': 'llvm',
+        '--fallback-style=': 'none',
         '--style=': 'file',
     }
 
