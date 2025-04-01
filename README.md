@@ -21,8 +21,8 @@ By default, linting will only be enabled if a [`.clang-format` file](https://cla
 
 | Setting | Description |
 | :-------| :-----------|
-| style | Formatting style. Default is `file`, which will use the `.clang-format` file in one of the parent directories of the file being linted. |
-| fallback-style | Style to use if `style` is `file` and no `.clang-format` file can be found. Default is `none`, which disables linting if no `.clang-format` file is found. |
+| `style` | Formatting style. Default is `file`, which will use the `.clang-format` file in one of the parent directories of the file being linted. |
+| `fallback-style` | Style to use if `style` is `file` and no `.clang-format` file can be found. Default is `none`, which disables linting if no `.clang-format` file is found. |
 
 For example, to use GNU style, add the following to your Sublime Text settings or project settings:
 
