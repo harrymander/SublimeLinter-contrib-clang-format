@@ -1,0 +1,15 @@
+SublimeLinter-contrib-clang-format - v0.4.1 release notes
+---------------------------------------------------------
+
+Please note that the default behaviour for this plugin changed in v0.4.0.
+
+By default, linting will only be enabled if a .clang-format file is present in
+one of the parent directories of the file being processed. Previously, the LLVM
+style preset was used if no .clang-format file could be found. To restore the
+previous default behaviour, add the following field to your SublimeLinter
+package settings:
+
+    "SublimeLinter.linters.clang-format.fallback-style": "llvm"
+
+For more information, please see:
+https://github.com/harrymander/SublimeLinter-contrib-clang-format
