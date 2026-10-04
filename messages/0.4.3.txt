@@ -1,4 +1,4 @@
-SublimeLinter-contrib-clang-format - v0.4.2 release notes
+SublimeLinter-contrib-clang-format - v0.4.3 release notes
 ---------------------------------------------------------
 
 Fix issue where error markers were misplaced if file contained non-ASCII characters.
